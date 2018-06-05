@@ -1,0 +1,331 @@
+@import 'reset.css';
+@import 'animation.css';
+
+:root {
+  --main-accent: #426c82;
+  --bg-color: #1c323d;
+  --highlight-color: #3f9ecf;
+  --comp-color: #6B0CE8;
+  --comp-color-2: #E88E0C;
+  --text-color: #fff;
+}
+
+body {
+  font-family: Roboto, Lato, Arial, Helvetica, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-size: 1.1em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+header {
+  background-color: var(--main-accent);
+  display: flex;
+  position: fixed;
+  top:0;
+  left:0;
+  flex-direction: column;
+  width: 15em;
+  height: 100vh;
+}
+
+#logo {
+  background-color: var(--highlight-color);
+  color: var(--text-color);
+  font-size: 2em;
+  padding: 0.25em;
+}
+
+#category-list h5 {
+  border-bottom: 2px solid var(--highlight-color);
+  padding: 0em 0.5em;
+}
+
+#category-list {
+  height: auto;
+  overflow-y: auto;
+  align-items: center;
+  font-size: 1.25em;
+}
+
+#category-list ul li {
+  margin: 0.75em 0.5em;
+}
+
+#category-list ul li a {
+  padding-bottom: 0.75em;
+}
+
+.text-thin {
+  font-weight: 300;
+}
+
+.text-bold {
+  font-weight: 800;
+}
+
+.input {
+  font: 1em Lato;
+  display: flex;
+  margin: 2em auto;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 0.2em;
+  text-align: left;
+  width: 65%;
+}
+
+#category-list {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.user-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em 1.5em;
+  line-height: 2.5em;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.img-avatar {
+  border-radius: 50%;
+  height: 2.5em;
+  width: 2.5em;
+}
+
+.flex-grow {
+  flex-grow: 1;
+  text-align: left;
+  padding-left: 1em;
+}
+
+/* List */
+
+main {
+  margin-left: 15em;
+  min-height: 100vh;
+}
+
+.list-container {
+  margin: 0 auto;
+  max-width: 100vw;
+  padding: 0 1em 0 1em;
+}
+
+.list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.list-item {
+  /*flex: auto;*/
+  position: relative;
+  width: 300px;
+  height: 300px;
+  /*max-width: 300px;*/
+  margin: .5vw;
+  background: linear-gradient(-20deg, var(--highlight-color), var(--main-accent));
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+
+.list-item img {
+  width: auto;
+  height: 100%;
+}
+
+.list-item .list-content {
+  width: 100%;
+  height: 2.5em;
+  background-color: rgba(0,0,0,0.75);
+  color: rgba(255,255,255,0.9);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  position: absolute;
+  bottom: 0;
+  animation-name: unshow;
+  animation-duration: 0.25s;
+}
+.load-more {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.75);
+  color: rgba(255,255,255,0.9);
+
+  position: absolute;
+  top: 0;
+  animation-name: load-unshow;
+  animation-duration: 0.25s;
+}
+
+.load-more h5 {
+  text-align: center;
+  padding-top: 75%;
+}
+
+
+@keyframes show {
+    from {height: 2em;}
+    to {height: 100%;}
+}
+
+@keyframes unshow {
+    from {height: 100%;}
+    to {height: 2em;}
+}
+
+@keyframes load-show {
+  from {background-color: rgba(0,0,0,0.75);}
+  to {background-color: rgba(0,0,0,0.9);}
+}
+
+@keyframes load-unshow {
+  from {background-color: rgba(0,0,0,0.9);}
+  to {background-color: rgba(0,0,0,0.75);}
+}
+
+.list-item:hover .list-content {
+  background-color: rgba(0,0,0,0.9);
+  color: white;
+  animation-name: show;
+  animation-duration: 0.25s;
+  height: 100%;
+}
+
+.load-more:hover {
+  background-color: rgba(0,0,0,0.9);
+  animation-name: load-show;
+  animation-duration: 0.25s;
+}
+
+.more {
+  text-align: center;
+  width: 100%;
+  white-space: normal;
+  overflow: normal;
+}
+
+.more p {
+  margin: 1em;
+  padding-top: 1em;
+  border-top: 1px solid white;
+}
+
+.list-item .list-content h5 {
+  margin: 0.5em 0.5em;
+  font-weight: 400;
+}
+
+.list-item:hover .list-content h5 {
+  margin: 1em 0.5em 0 1em;
+}
+
+
+/* Tab */
+
+.tab {
+  text-align: left;
+  font-size: 1.75em;
+  margin: 1.5em 0 0.5em 0.5em;
+}
+
+/* Video player */
+
+video {
+  width: 100%;
+  max-height: 80vh;
+  background-color: black;
+}
+
+#content {
+  margin: 0.5em 10%;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+}
+
+#about {
+  text-align: left;
+  width: 100%;
+}
+
+#stats {
+  text-align: left;
+  width: auto;
+  flex-grow: 1;
+}
+
+#about h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+#about p {
+  width: 90%;
+}
+
+#stats p {
+  text-align: left;
+}
+
+#stats .user-container {
+  padding: 0.25em;
+}
+
+#seasonepisode {
+  background-color: var(--highlight-color);
+  border: none;
+  border-radius: 0.2em;
+  padding: 0em 0.25em 0.1em 0.25em;
+}
+
+.tag {
+  background-color: var(--main-accent);
+  border: none;
+  border-radius: 0.5em;
+  padding: 0em 0.5em;
+}
+
+.tag:hover {
+  text-decoration: none;
+}
+
+.small {
+  font-size: 0.666em;
+  margin: 1em 0.25em;
+}
+.date {
+  color: lightgrey;
+}
+.comment {
+  border-left: 1px solid var(--main-accent);
+  margin-left: 2em;
+  padding-left: 1em;
+  text-align: left;
+}
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.container form {
+  width: 50;
+  margin-bottom: 1em;
+}
+
+.comment-list {
+  width: 70%;
+}
+
+form .user-container p button {
+  margin-left: 1em;
+}

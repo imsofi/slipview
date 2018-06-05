@@ -1,0 +1,94 @@
+/* Fade in */
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+ opacity:0;
+ -webkit-animation:fadeIn ease-in 1;
+ -moz-animation:fadeIn ease-in 1;
+ animation:fadeIn ease-in 1;
+
+ -webkit-animation-fill-mode:forwards;
+ -moz-animation-fill-mode:forwards;
+ animation-fill-mode:forwards;
+
+ -webkit-animation-duration:0.25s;
+ -moz-animation-duration:0.25s;
+ animation-duration:0.25s;
+
+ animation-delay: 0.15s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.3s;
+-moz-animation-delay: 0.3s;
+animation-delay: 0.3s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: 0.32s;
+  -moz-animation-delay: 0.32s;
+  animation-delay: 0.32s;
+}
+
+.fade-in.three {
+  -webkit-animation-delay: 0.34s;
+  -moz-animation-delay: 0.34s;
+  animation-delay: 0.34s;
+}
+
+.fade-in.four {
+  -webkit-animation-delay: 0.36s;
+  -moz-animation-delay: 0.36s;
+  animation-delay: 0.36s;
+}
+
+.fade-in.five {
+  -webkit-animation-delay: 0.38s;
+  -moz-animation-delay: 0.38s;
+  animation-delay: 0.38s;
+}
+
+.fade-in.six {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.fade-in.seven {
+-webkit-animation-delay: 0.42s;
+-moz-animation-delay: 0.42s;
+animation-delay: 0.42s;
+}
+
+.fade-in.eight {
+  -webkit-animation-delay: 0.44s;
+  -moz-animation-delay: 0.44s;
+  animation-delay: 0.44s;
+}
+
+.fade-in.nine {
+  -webkit-animation-delay: 0.46s;
+  -moz-animation-delay: 0.46s;
+  animation-delay: 0.46s;
+}
+
+.fade-in.ten {
+  -webkit-animation-delay: 0.48s;
+  -moz-animation-delay: 0.48s;
+  animation-delay: 0.48s;
+}
+
+.fade-in.eleven {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.fade-in.twelve {
+  -webkit-animation-delay: 0.52s;
+  -moz-animation-delay: 0.52s;
+  animation-delay: 0.52s;
+}
